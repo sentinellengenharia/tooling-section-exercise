@@ -7,9 +7,9 @@ viewer.grid.setGrid();
 viewer.axes.setAxes();
 
 async function loadIfc(url) {
-    await viewer.IFC.setWasmPath("../../../");
+    await viewer.IFC.setWasmPath("../");
     const model = await viewer.IFC.loadIfcUrl(url);
     viewer.shadowDropper.renderShadow(model.modelID);
 }
 
-loadIfc('./05.ifc');
+loadIfc('../05.ifc');
